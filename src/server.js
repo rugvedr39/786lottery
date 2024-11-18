@@ -80,6 +80,7 @@ function handleError(res, error, message) {
 
 // Define endpoints
 app.get('/getUserBalance', (req, res) => {
+    console.log("getUserBalance called")
     const phone = req.query.userId;
     if (!phone) {
         return res.status(400).json({ error: 'Missing userid' });
