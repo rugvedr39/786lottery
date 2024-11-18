@@ -11,9 +11,24 @@ import dotenv from "dotenv";
 dotenv.config();
 import cookieParser from "cookie-parser";
 
+
+import bodyParser from 'body-parser';
+import winston from 'winston';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+
+app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
 
@@ -38,6 +53,24 @@ sendMessageAdmin(io);
 // app.all('*', (req, res) => {
 //     return res.render("404.ejs");
 // });
+
+// Create log directory if it doesn't exist
+const logDir = path.join(__dirname, 'log');
+if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir);
+}
+
+
+const createLogger = (endpoint) => {
+    return winston.createLogger({
+        level: 'info',
+        format: winston.format.json(),
+        transports: [
+            new winston.transports.File({ filename: path.join(logDir, `${endpoint}-incoming.log`) }),
+            new winston.transports.File({ filename: path.join(logDir, `${endpoint}-outgoing.log`), level: 'info' }),
+        ],
+    });
+};
 
 const pool = mysql.createPool({
     host: "database-1.cdqemqu0murh.ap-south-1.rds.amazonaws.com",
