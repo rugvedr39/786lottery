@@ -10,7 +10,7 @@ const port = 3002;
 
 // Create a connection pool
 const pool = mysql.createPool({
-    host: "localhost",
+    host: "database-1.cdqemqu0murh.ap-south-1.rds.amazonaws.com",
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
