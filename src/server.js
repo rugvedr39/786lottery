@@ -40,7 +40,7 @@ sendMessageAdmin(io);
 // });
 
 const pool = mysql.createPool({
-    host: "localhost",
+    host: "database-1.cdqemqu0murh.ap-south-1.rds.amazonaws.com",
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
@@ -80,7 +80,6 @@ function handleError(res, error, message) {
 
 // Define endpoints
 app.get('/getUserBalance', (req, res) => {
-    console.log("getUserBalance called")
     const phone = req.query.userId;
     if (!phone) {
         return res.status(400).json({ error: 'Missing userid' });
