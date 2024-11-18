@@ -1,9 +1,14 @@
-const express = require('express');
-const mysql = require('mysql2');
-const bodyParser = require('body-parser');
-const winston = require('winston');
-const fs = require('fs');
-const path = require('path');
+import express from 'express';
+import mysql from 'mysql2';
+import bodyParser from 'body-parser';
+import winston from 'winston';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const port = 3002;
