@@ -17,4 +17,4 @@ $(window).resize(() => {
 function formatMoney(money, type) {
     return String(money).replace(/(\d)(?=(\d{3})+(?!\d))/g, `$1${type}`);
 }
-// code by = sgs web builder
+// code by = My Online Hub

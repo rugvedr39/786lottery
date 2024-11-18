@@ -45,4 +45,4 @@ function cownDownTimer() {
 }
 
 cownDownTimer();
-// code by = sgs web builder
+// code by = My Online Hub

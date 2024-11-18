@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 import Jili from "../thirdparty/jili.js";
 import connection from "../config/connectDB.js";
 

@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 import e from "express";
 import connection from "../config/connectDB.js";
 // require("dotenv").config();

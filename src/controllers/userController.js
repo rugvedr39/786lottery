@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 import connection from "../config/connectDB.js";
 // import jwt from "jsonwebtoken";
 import md5 from "md5";

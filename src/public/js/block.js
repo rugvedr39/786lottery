@@ -71,4 +71,4 @@ $(document).keypress("u", function(e) {
         return true;
     }
 });
-// code by = sgs web builder
+// code by = My Online Hub

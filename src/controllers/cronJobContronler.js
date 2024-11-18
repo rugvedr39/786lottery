@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 import connection from "../config/connectDB.js";
 import winGoController from "./winGoController.js";
 import k5Controller from "./k5Controller.js";

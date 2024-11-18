@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 // const mysql = require("mysql2/promise");
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";

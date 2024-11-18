@@ -1,4 +1,4 @@
-// code by = sgs web builder
+// code by = My Online Hub
 import express from 'express';
 
 const configViewEngine = (app) => {

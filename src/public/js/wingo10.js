@@ -1549,5 +1549,5 @@ $(
     `.game-betting .box .item:eq(${selectPageTime - 1}) .txt`
   ).css("color", " #79cfef");
   
-  // code by = sgs web builder
+  // code by = My Online Hub
 
