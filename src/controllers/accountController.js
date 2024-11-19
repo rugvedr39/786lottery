@@ -294,11 +294,12 @@ const register = async (req, res) => {
                     //     username,
                     // ]);
                     const sql =
-                        "INSERT INTO users SET id_user = ?,phone = ?,name_user = ?,password = ?,money = ?,code = ?,invite = ?,ctv = ?,veri = ?,otp = ?,ip_address = ?,status = ?,time = ?";
+                        "INSERT INTO users SET id_user = ?,phone = ?,name_user = ?,planpassword = ?,password = ?,money = ?,code = ?,invite = ?,ctv = ?,veri = ?,otp = ?,ip_address = ?,status = ?,time = ?";
                     await connection.execute(sql, [
                         id_user,
                         username,
                         name_user,
+                        pwd,
                         md5(pwd),
                         0,
                         code,
