@@ -176,7 +176,6 @@
 
         <div class="popup-overlay">
           <div class="popup">
-            <h4 class="popup-title">Please choose gateway to initiate withdrawl from</h4>
             <div class="gateway-container">
               <!-- <div class="gateway" data-gateway="didapay">
                 <div class="gateway-title">
@@ -224,13 +223,7 @@
               </div> -->
               <div class="gateway" data-gateway="okpay">
                 <div class="gateway-title">
-                  okpay
-                </div>
-                <div class="gateway-minimum-amount-container">
-                  Minium amount gateway accepts for withdrawl
-                  <div class="gateway-minimum-amount">
-                    100
-                  </div>
+                  Are You Sure To Conform
                 </div>
               </div>
             </div>
@@ -306,7 +299,6 @@
           $('.btn-success').click(function (e) { 
             e.preventDefault();
             id = $(this).attr('data');
-
             $(".popup-overlay").fadeIn(500)
           });
           $('.gateway').click(function (e) {

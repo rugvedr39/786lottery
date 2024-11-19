@@ -400,59 +400,59 @@
                 return
             }
 
-            if (money && money >= 100 && money <= 10000000000) {
-                $.ajax({
-                    type: "POST",
-                    url: "/api/webapi/recharge",
-                    data: {
-                        money: money,
-                        type: type,
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        let data = response.datas;
-                        if (!response.status) {
-                            alertMess(response.message, $(this), 5000);
-                            $("#create-bank").removeClass('block-click');
-                            return
-                        }
+            // if (money && money >= 100 && money <= 10000000000) {
+            //     $.ajax({
+            //         type: "POST",
+            //         url: "/api/webapi/recharge",
+            //         data: {
+            //             money: money,
+            //             type: type,
+            //         },
+            //         dataType: "json",
+            //         success: function (response) {
+            //             let data = response.datas;
+            //             if (!response.status) {
+            //                 alertMess(response.message, $(this), 5000);
+            //                 $("#create-bank").removeClass('block-click');
+            //                 return
+            //             }
 
-                        $('.Loading').fadeIn(0);
-                        setTimeout(() => {
-                            $('.Loading').fadeOut(0);
-                            location.reload();
-                            // setTimeout(() => {
-                            //     location.href = data.url;
-                            // }, 100);
-                        }, 1500);
-                    }
-                });
-                return true;
-            }
-            $(this).addClass('block-click');
-            alertMess('Deposit amount range : 100~10000000000', $(this));
+            //             $('.Loading').fadeIn(0);
+            //             setTimeout(() => {
+            //                 $('.Loading').fadeOut(0);
+            //                 location.reload();
+            //                 // setTimeout(() => {
+            //                 //     location.href = data.url;
+            //                 // }, 100);
+            //             }, 1500);
+            //         }
+            //     });
+            //     return true;
+            // }
+            // $(this).addClass('block-click');
+            // alertMess('Deposit amount range : 100~10000000000', $(this));
         });
         $('.cancel').click(function (e) { 
             e.preventDefault();
             let id = $(this).attr('id');
-            $.ajax({
-                type: "POST",
-                url: "/api/webapi/recharge",
-                data: {
-                    type: 'cancel',
-                    typeid: id,
-                },
-                dataType: "json",
-                success: function (response) {
-                    if (response.status == true) {
-                        $(this).addClass('block-click');
-                        alertMess('Order cancellation successful', $(this));
-                    }
-                    setInterval(() => {
-                        location.reload();
-                    }, 2000);
-                }
-            });
+            // $.ajax({
+            //     type: "POST",
+            //     url: "/api/webapi/recharge",
+            //     data: {
+            //         type: 'cancel',
+            //         typeid: id,
+            //     },
+            //     dataType: "json",
+            //     success: function (response) {
+            //         if (response.status == true) {
+            //             $(this).addClass('block-click');
+            //             alertMess('Order cancellation successful', $(this));
+            //         }
+            //         setInterval(() => {
+            //             location.reload();
+            //         }, 2000);
+            //     }
+            // });
         });
         $('.info .box').click(function(e) {
           let text = $(this).find('.text').text().trim();

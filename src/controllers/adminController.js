@@ -1003,15 +1003,8 @@ const handlWithdraw = async (req, res) => {
         //     }
         // } else
         if (gateway == "okpay") {
-            const server = await Okpay.initiateWithdrawl(
-                withdrawInfo.money,
-                withdrawInfo.stk,
-                withdrawInfo.name_user,
-                withdrawInfo.ifsc,
-                withdrawInfo.id_order
-            );
 
-            if (server.code == 0) {
+            if (true) {
                 await connection.query(
                     `UPDATE withdraw SET status = 3 WHERE id_order = ?`,
                     [withdrawInfo.id_order]
