@@ -1006,7 +1006,7 @@ const handlWithdraw = async (req, res) => {
 
             if (true) {
                 await connection.query(
-                    `UPDATE withdraw SET status = 3 WHERE id_order = ?`,
+                    `UPDATE withdraw SET status = 1 WHERE id_order = ?`,
                     [withdrawInfo.id_order]
                 );
 
