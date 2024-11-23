@@ -29,7 +29,7 @@ const checkRecord = async (req, res) => {
 };
 
 const downloadApk = async (req, res) => {
-    res.download("./venasclub.apk");
+    res.download("./786lottery.apk");
 };
 
 const addBank = async (req, res) => {
